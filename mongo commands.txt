@@ -1,0 +1,9 @@
+Mongo Commands
+
+1. Load Data (Batch)
+
+mongo data_dict C:/Users/dell/Desktop/data_dict/load_data.js
+
+2. See all documents
+
+db.data_dict.find();forEach(printjson);

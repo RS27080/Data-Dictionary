@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>List of hits with your query</title>
+<style type="text/css">
+body,td,th {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	color: #1E09D5;
+	}
+body {
+	background-color: papayawhip;
+	background-repeat: no-repeat;
+	margin-left: 30px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+table, th, td {
+    border: 1px black;
+}
+</style>
+</head>
+<body>
+
+<table> <tr> <td> <a href="http://localhost:3000"> HOME </td> </tr> </table>
+
+Search Results:
+<div>
+      <table>
+      <tr style="border:1px solid black;">
+	  <td style="border:1px solid black;"> S#                   </td>
+	  <td style="border:1px solid black;"> File Name            </td> 
+	  <td style="border:1px solid black;"> Field Name           </td>
+	  <td style="border:1px solid black;"> Length               </td>
+	  <td style="border:1px solid black;"> Description          </td>
+	  <td style="border:1px solid black;"> Host Screen          </td>
+	  <td style="border:1px solid black;"> AML1 Field Code      </td>
+	  <td style="border:1px solid black;"> Possible Values      </td>
+	  <td style="border:1px solid black;"> Available in DWH     </td>
+	  <td style="border:1px solid black;"> MLIs Consuming       </td>
+	  <td style="border:1px solid black;"> Channels Using       </td>
+	  <td style="border:1px solid black;"> G2C_V                </td>
+	  <td style="border:1px solid black;"> BluePrint Ref        </td>
+	  </tr>
+	  <% for(var i = 0; i < data_dict.length; i++) {
+	      var str = "http://localhost:3000/search?fieldName="+data_dict[i].fieldName;
+	  
+	  %>
+	  <tr>
+	  <td style="border:1px solid black;"> <%= i + 1 %> </td> 
+	  <td style="border:1px solid black;"> <%= data_dict[i].fileName %> </td> 
+	  <td style="border:1px solid black;"> <a href=<%=str%> > <%= data_dict[i].fieldName %> </a> </td> 
+	  <td style="border:1px solid black;"> <%= data_dict[i].length %>  </td> 
+	  <td style="border:1px solid black;"> <%= data_dict[i].description %>  </td> 
+	  <td style="border:1px solid black;"> <%= data_dict[i].hostScreenName %>  </td> 
+	  <td style="border:1px solid black;"> <%= data_dict[i].fieldCode %>  </td>
+	  <td style="border:1px solid black;"> <%= data_dict[i].possibleValues %>  </td>
+	  <td style="border:1px solid black;"> <%= data_dict[i].availableDWH %>  </td>
+	  <td style="border:1px solid black;"> <%= data_dict[i].mliNumber %>  </td>
+	  <td style="border:1px solid black;"> <%= data_dict[i].channelsUsing %>  </td>
+	  <td style="border:1px solid black;"> <%= data_dict[i].G2C_v %>  </td>
+	  <td style="border:1px solid black;"> <%= data_dict[i].bpReference %> </td>
+	  </tr> 
+	  <% } %>
+	  </table>
+	
+    
+</div>
+</body>
+</html>

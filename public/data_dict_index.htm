@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Data Dictionary</title>
+<style type="text/css">
+body,td,th {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	color: #1E09D5;
+}
+body {
+	background-color: papayawhip;
+	background-repeat: no-repeat;
+	margin-left: 30px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<table> <tr> <td> <a href="http://localhost:3000"> HOME </a> </td> </tr> </table>
+
+  Insert Data into dictionary Here: 
+  
+<form action="/Dictionary" method="POST">
+  <input type="text" placeholder="File Name" name="fileName" width="500" > <br> <br>
+  <input type="text" placeholder="Field Name" name="fieldName"> <br> <br>
+  <input type="text" placeholder="Length" name="length"> <br> <br>
+  <textarea name="description" rows="2" cols="100"> Enter Description </textarea> <br>  <br>
+  <input type="text" placeholder="Host Screen Name" name="hostScreenName"> <br> <br>
+  <input type="text" placeholder="Field Code" name="fieldCode"> <br> <br>
+  <input type="text" placeholder="List Of Possible Values" name="possibleValues"> <br> <br>
+  <input type="text" placeholder="Available in DWH" name="availableDWH"> <br> <br>
+  <input type="text" size="50" placeholder="MLI Numbers" name="mliNumber"> <br> <br>
+  <input type="list" placeholder="Available in eClipse" name="avlbleClipse">
+  <datalist>
+    <option value="Yes"> </option>
+    <option value="No"> </option>
+  </datalist> </input> <br> <br>
+
+  <input type="text" placeholder="Channels Using This field" name="channelsUsing"> <br> <br>
+  <input type="text" placeholder="G2C version" name="G2C_v"> <br> <br>
+  <input type="text" placeholder="BP Reference" name="bpReference"> <br> <br>
+  <button type="submit">INSERT</button> <span> 
+  </font>
+</form>
+</body>
+</html>

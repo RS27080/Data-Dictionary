@@ -1,0 +1,27 @@
+{
+  "name": "data_dict",
+  "version": "1.0.0",
+  "description": "Data Dictionary Application",
+  "main": "data_dict_index.js",
+  "scripts": {
+    "dev": "nodemon data_dict.js"
+  },
+  "author": "GPD BA TEAM",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.12.4",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "dialog": "^0.1.8",
+    "ejs": "^2.5.2",
+    "express": "~4.12.4",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^2.2.10",
+    "monk": "^1.0.1",
+    "morgan": "~1.5.3",
+    "serve-favicon": "~2.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}

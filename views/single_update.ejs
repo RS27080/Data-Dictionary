@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Field Result: </title>
+<style type="text/css">
+body,td,th {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	color: #1E09D5;
+}
+body {
+	background-color: papayawhip;
+	background-repeat: no-repeat;
+	margin-left: 30px;
+	margin-right: 10px;
+	margin-top: 1px;
+}
+</style>
+</head>
+<body>
+
+<table> <tr> <td> <a href="http://localhost:3000"> HOME </a> </td> </tr> </table>
+<div>
+<form action="/update" method="GET">
+Please edit required information : <br> <br>
+   	  <table style="margin-top:1px; margin-left:10px;">
+	  <% for(var i = 0; i < data_dict.length; i++) {%>
+	  <tr>
+	  <td> File Name           : </td> <td> <input type="text" name="fileName" value = "<%= data_dict[i].fileName %>" readonly > </input> </td> 
+	  </tr>
+	  <tr>
+      <td> Field Name          : </td> <td> <input type="text" name="fieldName" value = "<%= data_dict[i].fieldName %>" readonly > </input> </td> 
+	  </tr>
+	  <tr>
+	  <td> Length              : </td> <td> <input type="text" name="length" value = "<%= data_dict[i].length %>"> </input> </td> 
+	  </tr>
+	  <tr>
+	  <td> Description         : </td> <td> <input type="text" name="description" size="100" value = "<%= data_dict[i].description %>"> </input> </td> 
+	  </tr>
+	  <tr>
+	  <td> Host Screen         : </td> <td> <input type="text" name="hostScreenName" value = "<%= data_dict[i].hostScreenName %>"> </input> </td> 
+	  </tr>
+	  <tr>
+	  <td> AML1 Field Code     : </td> <td> <input type="text" name="fieldCode" value = "<%= data_dict[i].fieldCode %>"> </input> </td> 
+	  </tr>
+	  <tr>
+	  <td> Possible Values     : </td> <td> <input type="text" name="possibleValues" value = "<%= data_dict[i].possibleValues %>"> </input> </td> 
+	  </tr>
+	  <tr>
+	  <td> Available in DWH    : </td> <td> <input type="text" name="availableDWH" value = "<%= data_dict[i].availableDWH %>"> </input> </td> 
+	  </tr>
+	  <tr>
+	  <td> MLIs Consuming      : </td> <td> <input type="text" name="mliNumber" value = "<%= data_dict[i].mliNumber %>"> </input> </td>
+	  </tr>
+	  <tr>
+	  <td> Channels Using      : </td> <td> <input type="text" name="channelsUsing" value = "<%= data_dict[i].channelsUsing %>"> </input> </td>
+	  </tr>
+	  <tr>
+	  <td> G2C_V               : </td> <td> <input type="text" name="G2C_v" value = "<%= data_dict[i].G2C_v %>"> </input> </td> 
+	  </tr>
+	  <tr>
+	  <td> BluePrint Ref       : </td> <td> <input type="text" name="bpReference" value = "<%= data_dict[i].bpReference %>"> </input> </td>
+	  </tr>
+	  </table>
+	  <table>
+	  <tr>
+	  <td> <button type="submit">Update</button> </td> 
+	  </tr>
+	  <% } %>
+	  </table>
+  </form>
+	  
+    
+</div>
+</body>
+</html>
